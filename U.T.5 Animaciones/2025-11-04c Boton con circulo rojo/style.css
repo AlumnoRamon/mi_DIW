@@ -1,0 +1,66 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+}
+
+.button {
+    border: solid 1px transparent;
+    width: 400px;
+    height: 150px;
+    background-color: transparent;
+    color: white;
+    font-size: 2.5rem;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+
+    &:hover::before {
+        content: "";
+        position: absolute;
+        background-image: url(./tumblr_fc62deadd1e6ea26a3a5ea98e3495eb5_6adcdf4c_540.gif);
+        background-size: cover;
+        display: inline-block;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        width: 20px;
+        inset: 0;
+        margin: auto;
+        animation: grow 1s linear 0s 1 normal both;
+        z-index: -1;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: black;
+        border-radius: 30px;
+        height: 100%;
+        width: 100%;
+        z-index: -2;
+        inset: 0;
+        margin: auto;
+    }
+}
+
+@keyframes grow {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 400px;
+    }
+}

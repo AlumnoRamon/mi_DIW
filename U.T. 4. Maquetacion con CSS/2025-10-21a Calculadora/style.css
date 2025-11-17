@@ -1,0 +1,140 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-color: black;
+    gap: 10px;
+    color: white;
+    padding: 10px;
+}
+
+div {
+    text-align: center;
+    place-content: center;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: gray;
+}
+
+.resultado {
+    background-color: white;
+    border-radius: 20px;
+    grid-column-end: span 4;
+    color: black;
+    text-align: right;
+    padding: 20px;
+}
+
+
+.resta {
+    background-color: orangered;
+}
+
+
+.sumar {
+    background-color: orangered;
+}
+
+
+.multiplicar {
+    background-color: orangered;
+}
+
+
+.igual {
+    background-color: orangered;
+    grid-column-end: span 2;
+}
+
+
+.dividir {
+    background-color: orangered;
+}
+
+
+
+
+@media screen and (min-width: 451px) {
+    body {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .resultado {
+        grid-column-end: span 5;
+    }
+
+    .n-6 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .n-0 {
+        grid-column: 5;
+        grid-row: 2;
+    }
+
+    .n-1 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    
+    .n-2 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    
+    .n-3 {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    
+    .n-4 {
+        grid-column: 4;
+        grid-row: 3;
+    }
+
+    
+    .n-5 {
+        grid-column: 5;
+        grid-row: 3;
+    }
+
+    .sumar {
+        grid-column: 1;
+        grid-row: 4;
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+    }
+
+    .igual {
+        grid-column-end: span 3;
+    }
+
+    .dividir{
+        grid-column: 5;
+        grid-row: 4;
+    }
+
+    
+
+
+
+}

@@ -1,0 +1,33 @@
+:root {
+    font-size: 30px;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    color: white;
+    font-size: 2rem;
+    position: relative;
+
+    &::before {
+        content: "Arcas Meca";
+        position: absolute;
+        bottom: -45px;
+        transform: rotateX(180deg);
+        background: linear-gradient(black, 70%, gray);
+        background-clip: text;
+        color: transparent;
+    }
+}

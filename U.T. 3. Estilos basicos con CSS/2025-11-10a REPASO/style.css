@@ -1,0 +1,33 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+table, tr, th, td {
+    border: solid;
+    border-collapse: collapse;
+}
+
+input[name=continente][type=radio] {
+    display: none;
+}
+
+input[name=continente][type=radio]:checked ~ p{
+    font-weight: bold;
+    color: red;
+    background-color: yellow;
+}
+
+

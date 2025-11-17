@@ -1,0 +1,42 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+    display: grid;
+    place-content: center;
+}
+
+form{
+    background-color: greenyellow;
+    display: inline-grid;
+    grid-template-columns:auto auto;
+    grid-auto-rows: auto;
+    gap: 10px;
+}
+
+.profesion{
+    width: 100%;
+}
+
+#tSelProf{
+    width: 100%;
+}
+
+.genero {
+    border: solid;
+    border-radius: 5px;
+}
+
+.aficiones {
+    border: solid;
+    border-radius: 5px;
+}

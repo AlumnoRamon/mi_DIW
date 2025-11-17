@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            --color-azul: blue;
+            --color-marron: brown;
+            --color-amarillo: #ffff00;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100dvh;
+            place-content: center;
+            display: grid;
+        }
+
+        .boton {
+            background-color: var(--color-azul);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            position: relative;
+        }
+
+        .boton::before {
+            content: "";
+            position: absolute;
+            background-color: var(--color-marron);
+            width: 100%;
+            height: 100%;
+            top: 20px;
+            left: -20px;
+            z-index: -1;
+        }
+
+        .boton::after {
+            content: "";
+            position: absolute;
+            background-color: var(--color-amarillo);
+            width: calc(100% + 60px);
+            height: calc(100% + 60px);
+            top: -20px;
+            left: -40px;
+            z-index: -2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="boton">Abrir</div>
+</body>
+</html>

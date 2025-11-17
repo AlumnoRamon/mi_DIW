@@ -1,0 +1,108 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+*,::before,::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./images/the-earth.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100dvh;
+    width: 1280px;
+    inset: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: black;
+    color: white;
+    mix-blend-mode: multiply;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 30px;
+}
+
+
+main {
+    flex: 1 1 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "desierto  perro     perro     playa"
+        "desierto  basura    fuego     fuego"
+        "hombre    fabricas  fuego     fuego"
+        "hombre    bosque    bosque    plastico"
+    ;
+    gap: 15px;
+    padding: 20px;
+}
+
+div{
+    border: solid 4px red;
+    border-radius:10px;
+}
+
+.desierto {
+    background-image: url(./images/01.jpg);
+    background-size: cover;
+    grid-area: desierto;
+}
+.perro {
+    background-image: url(./images/02.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: perro;
+}
+
+.playa {
+    background-image: url(./images/03.jpg);
+    background-size: cover;
+    grid-area: playa;
+}
+
+.basura {
+    background-image: url(./images/04.jpg);
+    background-size: cover;
+    grid-area: basura;
+}
+
+.fuego {
+    background-image: url(./images/05.jpg);
+    background-size: cover;
+    grid-area: fuego;
+}
+
+.hombre {
+    background-image: url(./images/06.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: hombre;
+}
+
+.fabricas {
+    background-image: url(./images/07.jpg);
+    background-size: cover;
+    grid-area: fabricas;
+}
+
+.bosque {
+    background-image: url(./images/09.jpg);
+    background-size: cover;
+    grid-area: bosque;
+}
+
+.plastico {
+    background-image: url(./images/08.jpg);
+    background-size: cover;
+    grid-area: plastico;
+}

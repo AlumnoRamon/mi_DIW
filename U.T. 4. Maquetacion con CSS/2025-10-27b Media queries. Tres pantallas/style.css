@@ -1,0 +1,53 @@
+@media screen and (max-width: 450px) { /* Moviles */
+    :root {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    
+    *,::before,::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        min-height: 100dvh;
+        background-color: red;
+    }
+}
+
+@media screen and (min-width: 451px) and (max-width: 800px){ /* Tabletas */
+    :root {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    
+    *,::before,::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        min-height: 100dvh;
+        background-color: green;
+    }
+}
+
+@media screen and (min-width: 801px) { /* Monitores */
+    :root {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    
+    *,::before,::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        min-height: 100dvh;
+        background-color: blue;
+    }
+}

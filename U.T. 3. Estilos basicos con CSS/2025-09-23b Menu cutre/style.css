@@ -1,0 +1,51 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --color-oscuro: rgb(139, 4, 4);
+    --cololr-medio: rgb(255, 0, 0);
+    --color-claro: rgb(252, 147, 147);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color: var(--cololr-medio);
+    color: white;
+}
+
+header{
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.40rem;
+}
+
+nav {
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+}
+
+label[for=tChkMenu] {
+    font-size: 3rem;
+    background-color: var(--color-medio);
+    color: var(--cololr-claro);
+    rotate: 0.25turn;
+    position: absolute;
+    left: 30px;
+}
+
+#tChkMenu {
+    display: none;
+}
+
+#tChkMenu:not(:checked) + nav {
+    display: none;
+}
+
+a{
+    color: var(--color-claro);
+    text-decoration: none;
+}

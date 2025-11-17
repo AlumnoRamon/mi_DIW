@@ -1,0 +1,62 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --color-claro: lightblue;
+    --color-fondo-anuncio: red;
+    --color-texto-anuncio: white;
+    --ancho-anuncio: 200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: var(--color-claro);
+}
+
+/* En una etiqueta de tipo inline no funciona ancho y alto
+Hay que convertirla a inline-block
+*/
+.anuncio {
+    background-color: var(--color-fondo-anuncio);
+    color: var(--color-texto-anuncio);
+    width: var(--ancho-anuncio);
+    padding: 10px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    /* position: absolute;
+    z-index: 1; */
+}
+
+/*
+Posicionamiento absoluto no funciona si el padre no tiene configurado posicionamiento.
+En la mayorua de las situaciones, pondremos relative al padre y absolute al hijo.
+*/
+.anuncio-cerrar {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+/* El posicionamiento relativo permite mover una etiqueta pero respeta el espacio que ocupaba originalmente*/
+.pccomponentes {
+    background-color: orange;
+    color: white;
+    width: 150px;
+    border: solid black;
+    border-style: dotted;
+    position: relative;
+    /* left: 100px;
+    top: 100px; */
+}
+
+.pccomponentes>div:last-child {
+    position: absolute;
+    right: 0;
+    top: 0;
+    position: sticky;
+}

@@ -1,0 +1,12 @@
+/* @media screen { */
+    :root {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+        background-image: url(./halloween.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: orange;
+    }
+/* } */

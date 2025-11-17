@@ -1,0 +1,35 @@
+:root {
+    --color-fondo: lightcoral;
+    --ancho-galeria: 400px;
+    --ancho-borde: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: var(--color-fondo);
+}
+
+.galeria {
+    border: solid var(--ancho-borde) orangered;
+    /* width: 420px; */
+    width: calc( var(--ancho-galeria) + 2 * (var(--ancho-borde)) );
+    aspect-ratio: 16/9;
+    height: calc(var(--ancho-galeria) / 16 * 9 + 2* var(--ancho-borde));
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+}
+
+img {
+    width: var(--ancho-galeria);
+    /* aspect-ratio: 16/9; */
+    position: sticky;
+    /* top: 0; */
+
+}

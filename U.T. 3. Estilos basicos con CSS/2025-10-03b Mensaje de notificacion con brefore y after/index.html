@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+        }
+
+        *, *::after, ::before{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            content: "";
+        }
+
+        body {
+            height: 100dvh;
+            display: grid;
+            place-content: center;
+        }
+
+        .button {
+            background-color: rgb(58, 58, 58);
+            color: white;
+            padding: 0.6rem 1.8rem;
+            border-radius: 30px;
+            position: relative;
+        }
+
+        .button::before {
+            background-color: red;
+            margin: auto;
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            right: 0px;
+            left: 205px;
+            top: 7px;
+            display: grid;
+            place-content: center;
+        }
+
+        .button::after {
+            content: attr(data-mensajes-pendientes);
+            font-size: 0.9rem;
+            margin: auto;
+            position: absolute;
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+            right: 15px;
+            top: 9px;
+        }
+    </style>
+</head>
+<body>
+    <div id="tDivMensajes" class="button" data-mensajes-pendientes="9">Mensajes</div>
+
+    <script>
+        const nDiv = document.getElementById("tDivMensajes");
+        // nDiv.setAttribute("data-mensajes-pendientes",2);
+        nDiv.dataset.mensajesPendientes = 0;
+
+        let contador = 0;
+        setInterval(()  => {nDiv.dataset.mensajesPendientes = contador;contador++;}, 2000);
+    </script>
+</body>
+</html>

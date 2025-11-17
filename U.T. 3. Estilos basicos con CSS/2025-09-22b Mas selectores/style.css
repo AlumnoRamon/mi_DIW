@@ -1,0 +1,82 @@
+/* Simpre vamos a empezar con este bloque de codigo */
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+/* El asterisco representa todas las etiquetas */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: lightblue;
+}
+
+h1 {
+    border: solid 10px black;
+    margin: 50px;
+    width: 500px;
+}
+
+/* #: Selector de identificador */
+p#parrafo1 {
+    color: blue;
+}
+
+/* .:selector de clase */
+.parrafo-negrita {
+    font-weight: bold;
+    font-style: italic; /* cursiva, letras inclinadas */
+}
+
+p#parrafo1.parrafo-negrita {
+    color: red;
+    text-decoration: line-through;
+    text-transform: capitalize;
+}
+
+*.parrafo-negrita {
+    color: darkmagenta;
+    text-decoration: underline;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Un espacio entre dos selectores indica descendencia */
+
+div p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* >: representa la relacion hijo */
+div>p {
+    color: yellow;
+}
+
+/* +: representa el primer hermano de una etiqueta (adjacent sibling) (sibling es hermano)*/
+
+#parrafo2+p {
+    color: red;
+}
+
+/* ~ : representa los hermanos siguientes (next sibling)*/
+
+#parrafo5~p {
+    color: blue;
+}
+
+/* []: representan un atributo*/
+[disabled] {
+    color : transparent;
+}
+
+div[data-inventado=si] { /* Si pongo div delante este atributo solo afecta a la etiqueta div, si lo quito a todo */
+    font-size: 2rem;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            /* Position absolute */
+            height: 100dvh;
+            display: grid;
+            place-content: center;
+        }
+        
+        .button{
+            border: solid 5px darkblue;
+            background-color: lightblue;
+            padding: 20px 60px; /* El primer rem es arriba y abajo y el segundo izquierda y derecha */
+            color: darkblue;
+            font-weight: bold;
+            border-radius: 40px;
+            position: relative; /* primero relative y a los "hijos" absolute */
+        }
+
+        .button::before {
+            content: ""; /* Con before y after siempre hay que poner content*/
+            border: solid 5px orange;
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            border-radius: 30px;
+            display: inline-block; /* para que coja el tamaño del padre*/
+            position: absolute; /* El 95% de las veces debemos poner relative en el padre y absolute en el before */
+            inset: 0; /* para poder centrar automaticamente top bottom left y right en 0*/
+            margin: auto;
+            box-sizing: unset; /* parapoder usar 100% en ancho y alto */
+        }
+
+        .button::after {
+            content: ""; /* Con before y after siempre hay que poner content*/
+            position: absolute;
+            border: solid 5px purple;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            border-radius: 20px;
+            display: inline-block;
+            position: absolute; 
+            inset: 0; 
+            margin: auto;
+            box-sizing: unset;
+        }
+        </style>
+</head>
+<body>
+
+    <div class="button">Abrir</div>
+    
+</body>
+</html>

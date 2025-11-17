@@ -1,0 +1,53 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    display: grid;
+    place-content: center;
+}
+
+.watch-needle-second {
+    animation: giro 1s linear 5;
+    transform-origin: right;
+}
+
+.ball {
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    right: 100px;
+    animation: movimiento 3s ease-in 2 alternate both;
+    animation-play-state: paused;
+}
+
+@keyframes movimiento {
+    from {
+        top: 10%;
+    }
+    to{
+        top: 80%;
+    }
+}
+
+@keyframes giro {
+    from{
+        rotate: 0turn;
+    }
+
+    to{
+        rotate: 1turn;
+    }
+}

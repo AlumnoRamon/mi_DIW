@@ -1,0 +1,12 @@
+/* @media print { */
+    :root {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    body {
+        background-image: url(./halloween.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: orange;
+    }
+/* } */

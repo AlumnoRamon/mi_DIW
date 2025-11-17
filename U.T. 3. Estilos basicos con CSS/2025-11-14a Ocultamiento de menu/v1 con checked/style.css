@@ -1,0 +1,54 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+header {
+    border: solid;
+    display: flex;
+    height: 3rem;
+
+    :first-child {
+        flex-grow: 1;
+    }
+
+}
+
+nav {
+    position: absolute;
+    height: calc(100% - 3rem);
+    left: -100dvw;
+    width: 100dvw;
+    color: white;
+    background-color: rgb(0,0,255,0.5);
+    transition-duration: 500ms;
+    transition-property: left;
+    transition-timing-function: linear;
+
+    ul {
+        height: 100%;
+        width: 25%;
+        background-color: blue;
+    }
+}
+
+.button-menu {
+    display: none;
+}
+
+.button-menu:checked + nav {
+    display: block;
+    left: 0dvw;
+}

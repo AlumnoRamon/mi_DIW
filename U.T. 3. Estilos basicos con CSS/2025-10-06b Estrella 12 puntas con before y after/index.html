@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root{
+            font-family: Arial, Helvetica, sans-serif;
+            font-family: 32px;
+            --color-azul: blue;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: solid 15px var(--color-azul);
+            top: -15px;
+            left: -15px;
+            content: "";
+            /* box-sizing: border-box; */
+        }
+
+        body {
+            height: 100dvh;
+            display: grid;
+            place-content: center;
+        }
+
+        .estrella {
+            position: relative;
+            border: solid 15px var(--color-azul);
+            width: 200px;
+            height: 200px;
+        }
+
+        .estrella::before {
+            transform: rotate(120deg);
+        }
+
+        .estrella::after {
+            transform: rotate(240deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="estrella"></div>
+</body>
+</html>

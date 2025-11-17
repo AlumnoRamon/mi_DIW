@@ -1,0 +1,129 @@
+/* general o xs extra-small */
+:root {
+  --color-100: #e8f5e9;
+  --color-200: #c8e6c9;
+  --color-300: #a5d6a7;
+  --color-400: #81c784;
+  --color-500: #66bb6a;
+  --color-600: #4caf50;
+  --color-700: #43a047;
+  --color-800: #388e3c;
+  --color-900: #2e7d32;
+  --color-1000: #1b5e20;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    main {
+        flex: 1 1 0;
+        overflow-y: scroll;
+    }
+
+
+
+    /* display: grid;
+    grid-template-rows: auto 1fr auto; */
+
+    /* display: grid;
+    grid-template-areas: 
+        "encabezado"
+        "principal"
+        "pie"
+    ;
+    grid-template-rows: auto 1fr auto;
+
+    header {
+        grid-area: encabezado;
+    }
+
+    main{
+        grid-area: principal;
+    }
+
+    footer {
+        grid-area: pie;
+    } */
+
+
+}
+
+.header-app {
+    background-color: var(--color-800);
+    color: var(--color-100);
+    padding: 0.5rem;
+    display: flex;
+    .title {
+        flex: 1 1 0;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .login {
+        background-color: transparent;
+        color: inherit;
+        border: none;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            display: grid;
+            place-content: center;
+            border-radius: 50%;
+        }
+
+        &[-data-session=closed]::before {
+            background-image: url(./abstract-user-flat-3.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &[-data-session=opened]::before {
+            content: attr(-data-username);
+        }
+    }
+}
+
+footer {
+    background-color: var(--color-800);
+    text-align: center;
+}
+
+nav {
+    display: none;
+}
+
+.login:focus + nav {
+    display: block;
+}
+
+/* sm small */
+@media screen and (width >= 640px) {
+}
+
+/* md medium*/
+@media screen and (width >= 768px){
+}
+
+/* lg large */
+@media screen and (width >= 1024px){
+}
+
+/* xl extra-large */
+@media screen and (width >= 1280px){
+}
+
+/* 2xl two times extra-large */
+@media screen and (width >= 1536px){
+}

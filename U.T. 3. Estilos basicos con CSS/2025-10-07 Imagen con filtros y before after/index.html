@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            --ancho: 1920px;
+            --alto: 1080px;
+            --tercio: calc(var(--ancho) / 3);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            content: "";
+            position: absolute;
+            height: var(--alto);
+            width: var(--tercio);
+        }
+
+        body {
+            min-height: 100dvh;
+        }
+
+        .cs {
+            height: var(--alto);
+            width: var(--ancho);
+            background-image: url(./cs2.webp);
+            position: relative;
+        }
+
+        .cs::after {
+            background-image: url(./cs2.webp);
+            background-position-x: right;
+            right: 0;
+            filter: sepia();
+        }
+
+        .cs::before {
+            background-image: url(./cs2.webp);
+            background-position-x: center;
+            inset: 0;
+            margin: auto;
+            filter: grayscale();
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="cs"></div>
+</body>
+</html>

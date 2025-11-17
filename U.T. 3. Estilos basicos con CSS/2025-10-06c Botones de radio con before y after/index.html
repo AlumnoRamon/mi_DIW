@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+        }
+
+        *, *::before, *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            content: "";
+        }
+
+        body {
+            height: 100dvh;
+            background-color: pink;
+            display: grid;
+            place-content: center;
+        }
+
+        input[type=radio] {
+            appearance: none;
+            width: 2.5rem;
+            height: 1.4rem;
+            border: solid 2px red;
+            border-radius: 0.8rem;
+            position: relative;
+        }
+
+        input[type=radio]::before {
+            background-color: red;
+            background-image: url(./128x128.png);
+            background-size: contain;
+            border-radius: 80px;
+            width: 50%;
+            height: 90%;
+            top: 2px;
+            left: 2px;
+            position: absolute;
+            transition: 0.5s;
+        }
+
+        input[type=radio]:checked::before{
+            background-color: green;
+            background-image: url(./dark.png);
+            background-size: contain;
+            border-radius: 80px;
+            width: 50%;
+            height: 90%;
+            top: 2px;
+            left: 30px;
+            position: absolute;
+            transition: 0.5s;
+        }
+
+        input[type=radio]:checked {
+            appearance: none;
+            width: 2.5rem;
+            height: 1.4rem;
+            border: solid 2px green;
+            border-radius: 0.8rem;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Bocadillos</h1><br>
+    <form action="">
+        <input type="radio" name="bocadillo" id="chorizo">
+        <label for="chorizo">Chorizo</label>
+        <br>
+        <input type="radio" name="bocadillo" id="salchichon">
+        <label for="salchichon">Salchichon</label>
+        <br>
+        <input type="radio" name="bocadillo" id="tortilla">
+        <label for="tortilla">Tortilla</label>
+        <br>
+        <input type="radio" name="bocadillo" id="atun">
+        <label for="atun">Atun</label>
+    </form>
+</body>
+</html>

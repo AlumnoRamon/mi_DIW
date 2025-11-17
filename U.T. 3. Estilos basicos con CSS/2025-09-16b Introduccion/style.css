@@ -1,0 +1,30 @@
+body {
+    background-color: #fa8a61;
+    background-image: url(./patterns.jpg);
+    /* background-repeat: no-repeat; */
+}
+
+h1 {
+   background-color: black; 
+   color: white;
+   text-align: center;
+   font-size: 4rem;
+}
+
+img {
+    width: 20%;
+}
+
+h2 {
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+}
+
+ul {
+    background-color: #000000e6;
+    color: white;
+    list-style-type: georgian;
+    list-style-position: outside;
+    /* list-style-image: url(./32.webp);  TENDRIA QUE SER 32x32*/
+}

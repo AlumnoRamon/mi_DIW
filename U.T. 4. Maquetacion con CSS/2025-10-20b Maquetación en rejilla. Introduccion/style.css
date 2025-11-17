@@ -1,0 +1,57 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100dvh;
+    background-color: lightblue;
+    display: grid;
+    padding: 10px;
+    gap: 10px;
+    grid-auto-rows: 100px;
+
+    /* grid-template-columns: 100px 4fr 100px 1fr 100px; */
+    /* grid-template-columns: repeat(2, 100px) 1fr repeat(2, 100px); forma abreviada de hacer lo de arriba */
+    grid-template-columns: repeat(5, 100px);
+}
+
+.box {
+    border: solid 1px;
+
+    &.box:nth-child(1){
+        background-color: red;
+    }
+
+    &.box:nth-child(7){
+        background-color: greenyellow;
+        /* grid-column-start: span 2;
+        grid-column-end: span 4; */
+        grid-column: 2/ span 3;
+    }
+
+    &.box:nth-child(12){
+        background-color: blue;
+        grid-column-end: span 3;
+        grid-row-end: span 4 ;
+    }
+
+    &:nth-child(15){
+        background-color: magenta;
+        grid-column-end: 3;
+        grid-row-end: 5;
+        grid-row-start: 10;
+        grid-row-end: 15;
+    }
+
+    &:nth-child(15){
+        background-color: yellow;
+        grid-column: 2 / span 3;
+        grid-row: 18 / span 3;
+    }
+}

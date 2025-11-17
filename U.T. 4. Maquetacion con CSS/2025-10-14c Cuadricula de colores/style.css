@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.color-red {
+    background-color: red;
+}
+
+.color-blue {
+    background-color: blue;
+}
+
+.color-yellow {
+    background-color: yellow;
+}
+
+.color-gray {
+    background-color: gray;
+}
+
+.color-chocolate {
+    background-color: chocolate;
+}
+
+.color-darkred {
+    background-color: darkred;
+}
+
+.color-orange {
+    background-color: orange;
+}
+
+.color-olive {
+    background-color: olive;
+}
+
+.color-black {
+    background-color: black;
+}
+
+.color-skyblue {
+    background-color: skyblue;
+}

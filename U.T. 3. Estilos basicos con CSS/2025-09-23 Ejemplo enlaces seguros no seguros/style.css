@@ -1,0 +1,46 @@
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 1rem;
+    min-height: 100dvh; /* d dynamic (para cuando salga el teclado se reajuste) vh viewport height (altura de arriba hacia abajo en moviles) */
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 0.25rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Acento circunflejo ^ La cadena debe empezar por ese patron */
+
+/* a[href^="https"] {
+    color: green;
+}
+
+a:not([href^="https"]) {
+    color: red;
+} */
+
+span {
+    color: red;
+}
+
+a[href^="https"]~span {
+    display: none;
+}
+
